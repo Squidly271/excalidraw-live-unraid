@@ -1,0 +1,8 @@
+.git
+**/.git
+evidence
+node_modules
+**/node_modules
+**/dist
+**/.env*
+vendor/mcp_excalidraw/demo.gif

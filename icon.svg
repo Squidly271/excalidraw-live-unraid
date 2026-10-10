@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Excalidraw Live">
+  <rect x="8" y="8" width="240" height="240" rx="48" fill="#5144a6"/>
+  <path d="M54 68 Q128 61 203 68 L201 180 Q127 189 54 181 Z" fill="#f5f1ff" stroke="#201944" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M77 145 L130 90 L156 114 L103 170 L72 177 Z" fill="#ffc75b" stroke="#201944" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M130 90 L143 77 Q149 71 155 77 L170 91 Q177 98 170 105 L156 114" fill="#e695aa" stroke="#201944" stroke-width="6"/>
+  <circle cx="195" cy="190" r="30" fill="#66d8a1" stroke="#201944" stroke-width="7"/>
+  <path d="M183 190 L192 199 L207 181" fill="none" stroke="#201944" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

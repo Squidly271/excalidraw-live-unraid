@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Profile>Excalidraw Live packaging by nullifyr: a persistent canvas and stdio MCP runtime for self-hosted Unraid installations. Upstream application by yctimlin, licensed MIT. Support and installation documentation are maintained in the public project repository.</Profile>
+  <Forum>https://github.com/nullifyr/excalidraw-live-unraid/issues</Forum>
+  <WebPage>https://github.com/nullifyr/excalidraw-live-unraid</WebPage>
+  <Icon>https://raw.githubusercontent.com/nullifyr/excalidraw-live-unraid/main/icon.svg</Icon>
+</Maintainer>

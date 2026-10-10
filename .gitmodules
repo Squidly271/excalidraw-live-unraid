@@ -1,0 +1,3 @@
+[submodule "vendor/mcp_excalidraw"]
+	path = vendor/mcp_excalidraw
+	url = https://github.com/yctimlin/mcp_excalidraw.git
