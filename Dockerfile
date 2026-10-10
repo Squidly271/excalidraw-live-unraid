@@ -3,7 +3,7 @@
 FROM node:24-bookworm-slim@sha256:d6aa754f16b3197301076f047b5def2f02ea1dbbc2ca920407d46d7ec7f87b20 AS build
 WORKDIR /app
 COPY build/package*.json ./
-RUN npm ci
+RUN npm ci && npm audit --audit-level=moderate
 COPY vendor/mcp_excalidraw/ ./
 COPY build/package*.json ./
 RUN npm run build && npm run type-check && npm run type-check:frontend
@@ -19,7 +19,7 @@ RUN mkdir -p /licenses && cp LICENSE /licenses/mcp-excalidraw-MIT.txt \
     && mv /tmp/browser-fonts node_modules/@excalidraw/excalidraw/dist/prod/fonts
 
 FROM node:24-bookworm-slim@sha256:d6aa754f16b3197301076f047b5def2f02ea1dbbc2ca920407d46d7ec7f87b20 AS runtime
-ARG VERSION=1.0.0
+ARG VERSION=1.0.1
 ARG REVISION=unknown
 LABEL org.opencontainers.image.title="Excalidraw Live" \
       org.opencontainers.image.description="Persistent Excalidraw canvas and stdio MCP, packaged for Unraid" \

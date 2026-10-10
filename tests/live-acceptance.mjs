@@ -73,6 +73,14 @@ try {
   await sync();
   assert(!(await scene()).some(e => e.id === 'acceptance-box'));
   pass('MCP deletion reaches existing browser');
+  await mcp.call('create_from_mermaid', { mermaidDiagram: 'graph LR; A[Agent] --> B[Canvas];' });
+  await waitFor(async () => {
+    const elements = await scene();
+    return elements.some(e => e.text === 'Agent') && elements.some(e => e.text === 'Canvas');
+  });
+  assert((await scene()).some(e => e.id === 'acceptance-text'));
+  await page.screenshot({ path: `${evidence}/mermaid.png` });
+  pass('Patched frontend Mermaid conversion works through real MCP and preserves existing scene');
   // Synthetic image attachment exercises persistent blob storage.
   const file = { id: 'acceptance-pixel', mimeType: 'image/png', created: 1, dataURL: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aOGQAAAAASUVORK5CYII=' };
   const upload = await fetch(url + '/api/files', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ files: [file] }) });

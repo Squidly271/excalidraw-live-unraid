@@ -7,7 +7,8 @@ integrity and durability tests, plus both TypeScript checks.
 The live test edits **an empty dedicated test canvas**. It uses a real browser
 and real MCP over `docker exec -i`, verifies the browser scene after live
 create/update/delete messages, and restarts Docker to compare the full scene,
-binary file and snapshot responses. Use synthetic content only. It creates
+binary file and snapshot responses. It also exercises Mermaid conversion in the
+real frontend after the dependency patches. Use synthetic content only. It creates
 local screenshots and `evidence/acceptance.json`; these are ignored by Git.
 
 Install `cloakbrowser` and `playwright-core` in your test environment. With an
